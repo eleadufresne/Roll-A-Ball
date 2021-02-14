@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -16,6 +17,9 @@ public class PlayerController : MonoBehaviour
     private int count; //score
     private float movementX;
     private float movementY;
+    
+    private float displayTime;
+    private float disapearTime;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +30,7 @@ public class PlayerController : MonoBehaviour
         winTextObject.SetActive(false);
         restartTextObject.SetActive(false);
         missingTextObject.SetActive(false);
+        displayTime = 5.0f;
     }
     void OnMove(InputValue movementValue)
     {//function body
@@ -37,16 +42,24 @@ public class PlayerController : MonoBehaviour
         movementY = movementVector.y;
     }
 
+    void Update()
+    {
+        if (missingTextObject.activeSelf && (Time.time >= disapearTime) )
+        {
+            missingTextObject.SetActive(false);
+        }
+    }
+
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
         if (count == 27)
         {
             missingTextObject.SetActive(true);
+            disapearTime = Time.time + displayTime;
         }
-        if (count >= 28)
+        else if (count >= 28)
         {
-            missingTextObject.SetActive(false);
             winTextObject.SetActive(true);
             restartTextObject.SetActive(true);
         }
