@@ -11,8 +11,9 @@ public class Restart : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(PlayAgainKeyboardInput))
-            SceneManager.LoadScene("MiniGame");
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //SceneManager.LoadScene(0);
+        {
+            SceneManager.LoadScene(0);
+            Time.timeScale = 1.0f;
+        }
     }
 }

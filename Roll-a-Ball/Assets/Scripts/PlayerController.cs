@@ -4,14 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 0.0f;
-    public TextMeshProUGUI countText;
-    public GameObject winTextObject;
-    public GameObject restartTextObject;
-    public GameObject missingTextObject;
+    [SerializeField] private float speed = 0.0f;
+    [SerializeField] private TextMeshProUGUI countText;
+    [SerializeField] private GameObject winTextObject;
+    [SerializeField] private GameObject restartTextObject;
+    [SerializeField] private GameObject missingTextObject;
+    [SerializeField] private GameObject bigPickUp;
 
     private Rigidbody rb;
     private int count; //score
@@ -25,12 +27,18 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        count = 0;
+        if(SceneManager.GetActiveScene().buildIndex == 1)
+            count = 29;
+        else
+            count = 0;
         SetCountText();
         winTextObject.SetActive(false);
         restartTextObject.SetActive(false);
         missingTextObject.SetActive(false);
+        bigPickUp.SetActive(false);
         displayTime = 5.0f;
+        
+        
     }
     void OnMove(InputValue movementValue)
     {//function body
@@ -53,15 +61,18 @@ public class PlayerController : MonoBehaviour
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if (count == 27)
+        if (count == 28)
         {
             missingTextObject.SetActive(true);
             disapearTime = Time.time + displayTime;
+            bigPickUp.SetActive(true);
         }
-        else if (count >= 28)
+        else if (count >= 30)
         {
+            Time.timeScale = 0.01f;
             winTextObject.SetActive(true);
             restartTextObject.SetActive(true);
+            countText.text = " ";
         }
     }
     

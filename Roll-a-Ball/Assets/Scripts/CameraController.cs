@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraController : MonoBehaviour
 {
@@ -19,5 +20,6 @@ public class CameraController : MonoBehaviour
     {
         //makes the camera follow the position of the player (but not rotation)
         transform.position = player.transform.position + offset;
+
     }
 }
