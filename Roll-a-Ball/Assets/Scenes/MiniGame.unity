@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1962,8 +1962,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "It seems like you forgot to collect a cube at \nthe start. You must go
-    back! "
+  m_text: 'There is still a cube at the start,
+
+    Go back! '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3b6c3b718f654f140b5035ba6227594d, type: 2}
   m_sharedMaterial: {fileID: -9218684451155336320, guid: 3b6c3b718f654f140b5035ba6227594d,
@@ -3603,7 +3604,6 @@ Transform:
   - {fileID: 2046610544}
   - {fileID: 1726844493}
   - {fileID: 1674642757}
-  - {fileID: 1046139464}
   - {fileID: 1375776276}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -3866,96 +3866,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b825ffc2b50f2a8409c318643a7765ff, type: 3}
---- !u!1001 &1046139463
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 985257602}
-    m_Modifications:
-    - target: {fileID: 4399062935039054767, guid: b825ffc2b50f2a8409c318643a7765ff,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 27
-      objectReference: {fileID: 0}
-    - target: {fileID: 4399062935039054767, guid: b825ffc2b50f2a8409c318643a7765ff,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4399062935039054767, guid: b825ffc2b50f2a8409c318643a7765ff,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4399062935039054767, guid: b825ffc2b50f2a8409c318643a7765ff,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4399062935039054767, guid: b825ffc2b50f2a8409c318643a7765ff,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 518.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 4399062935039054767, guid: b825ffc2b50f2a8409c318643a7765ff,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4399062935039054767, guid: b825ffc2b50f2a8409c318643a7765ff,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 4399062935039054767, guid: b825ffc2b50f2a8409c318643a7765ff,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.84462327
-      objectReference: {fileID: 0}
-    - target: {fileID: 4399062935039054767, guid: b825ffc2b50f2a8409c318643a7765ff,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.46193978
-      objectReference: {fileID: 0}
-    - target: {fileID: 4399062935039054767, guid: b825ffc2b50f2a8409c318643a7765ff,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.19134173
-      objectReference: {fileID: 0}
-    - target: {fileID: 4399062935039054767, guid: b825ffc2b50f2a8409c318643a7765ff,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.19134173
-      objectReference: {fileID: 0}
-    - target: {fileID: 4399062935039054767, guid: b825ffc2b50f2a8409c318643a7765ff,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 4399062935039054767, guid: b825ffc2b50f2a8409c318643a7765ff,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 4399062935039054767, guid: b825ffc2b50f2a8409c318643a7765ff,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 5297109368528212919, guid: b825ffc2b50f2a8409c318643a7765ff,
-        type: 3}
-      propertyPath: m_Name
-      value: Collectable (27)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b825ffc2b50f2a8409c318643a7765ff, type: 3}
---- !u!4 &1046139464 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4399062935039054767, guid: b825ffc2b50f2a8409c318643a7765ff,
-    type: 3}
-  m_PrefabInstance: {fileID: 1046139463}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1054916042
 GameObject:
   m_ObjectHideFlags: 0
@@ -3966,6 +3876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1054916044}
   - component: {fileID: 1054916043}
+  - component: {fileID: 1054916045}
   m_Layer: 0
   m_Name: Background Music
   m_TagString: Untagged
@@ -4083,6 +3994,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1054916045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054916042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a2d5ef314f4dd488fb588c46b46872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1056170006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5726,7 +5649,7 @@ Transform:
   m_Children:
   - {fileID: 404825904}
   m_Father: {fileID: 985257602}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 45, y: 45, z: 45}
 --- !u!1 &1392199490
 GameObject:

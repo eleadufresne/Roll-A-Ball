@@ -26,9 +26,10 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
         rb = GetComponent<Rigidbody>();
         if(SceneManager.GetActiveScene().buildIndex == 1)
-            count = 29;
+            count = 28;
         else
             count = 0;
         SetCountText();
@@ -37,8 +38,6 @@ public class PlayerController : MonoBehaviour
         missingTextObject.SetActive(false);
         bigPickUp.SetActive(false);
         displayTime = 5.0f;
-        
-        
     }
     void OnMove(InputValue movementValue)
     {//function body
@@ -61,11 +60,15 @@ public class PlayerController : MonoBehaviour
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if (count == 28)
+        if (count == 27)
         {
             missingTextObject.SetActive(true);
             disapearTime = Time.time + displayTime;
             bigPickUp.SetActive(true);
+        }
+        else if (count == 29)
+        {
+            speed *= 4.0f;
         }
         else if (count >= 30)
         {

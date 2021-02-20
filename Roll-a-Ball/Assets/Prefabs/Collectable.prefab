@@ -61,6 +61,23 @@ MonoBehaviour:
   speed: 1.25
   range: 0.45
   height: 1
+--- !u!114 &7368723170043773989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7008788577779992556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 10
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 4d9e0ec930e0dd5418367170927541d4, type: 2}
 --- !u!1001 &6296339470169714255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78,6 +95,11 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3901576811558529446, guid: b6be6cfad57ff0c43808bda65e3d964b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f390b92f6ebc95c4a9fba2133b2d5cdb, type: 2}
     - target: {fileID: 3901576811558529448, guid: b6be6cfad57ff0c43808bda65e3d964b,
         type: 3}
       propertyPath: m_RootOrder
